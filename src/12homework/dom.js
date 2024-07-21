@@ -2,6 +2,7 @@ console.log("Hello")
 
 console.log('here')
 
-function test () {
+
+function newFunction () {
     console.log("Hello")
 }
