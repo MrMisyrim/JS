@@ -39,7 +39,7 @@ console.log(searchForMatches('cccdddhha0bbbj',/a0b{3}/ig))
 console.log(searchForMatches('test@mail.ru', /(\w+.+)/ig))
 // 8
 //задание выполнено без использования именнованных скобочных групп
-// нужно былро так /(?<year>[0-9]{4})-(?<month>[0-9]{2})-(?<day>[0-9]{2})/g;
+// нужно было так /(?<year>[0-9]{4})-(?<month>[0-9]{2})-(?<day>[0-9]{2})/g;
 console.log(searchForMatches('Date 2023-08-30', /(\d+.){3}/ig))
 
 /**
