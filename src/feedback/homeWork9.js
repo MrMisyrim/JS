@@ -19,7 +19,7 @@ function searchForMatches(string, pattern) {
 //ПРИНЯТО
 //console.log(searchForMatches('cccdddhhabfgaabbb',/ab{3}/ig))
 // 2
-//можно было было использовать квантификатор * /a(0)(b)*/gi
+//можно было  использовать квантификатор * /a(0)(b)*/gi
 console.log(searchForMatches('cccdddhha0bbbj',/a0b{3}/ig))
 // 3
 //ПРИНЯТО
