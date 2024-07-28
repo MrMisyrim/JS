@@ -8,11 +8,11 @@
 //  console.log(checkString('kldfgjkghkljkg3436567')) // true
 
 // Задание 2
-function searchForMatches(string, pattern) {
-    let result = string.match(pattern)
-    return result
-
-}
+// function searchForMatches(string, pattern) {
+//     let result = string.match(pattern)
+//     return result
+//
+// }
 // 1
 // console.log(searchForMatches('cccdddhhabfgaabbb',/ab{3}/ig))
 // 2
