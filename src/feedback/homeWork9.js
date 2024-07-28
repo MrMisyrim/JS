@@ -45,4 +45,6 @@ console.log(searchForMatches('Date 2023-08-30', /(\d+.){3}/ig))
 /**
  * Итого 7 из 10
  */
- 
+
+
+
