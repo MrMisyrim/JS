@@ -42,7 +42,7 @@ console.log(concat('test')('test2')('test3'))
  *     return (job) => {
  *         if (country == 'Spain' && job == 'programmer') {
  *             return {baseRate: 1000}
- *         } else if (ountry == 'France' && job == 'tester') {
+ *         } else if (country == 'France' && job == 'tester') {
  *             return {baseRate: 1200}
  *         }
  *     }

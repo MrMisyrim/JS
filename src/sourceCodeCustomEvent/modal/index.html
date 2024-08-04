@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script defer src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>MODAL </title>
+</head>
+<body>
+    <!-- Кнопка открытия модального окна -->
+    <button id="openModalButton">Open Modal</button>
+
+    <!-- Модальное окно и оверлей -->
+    <div id="overlay"></div>
+    <div id="modal">
+        <p>This is the modal content.</p>
+        <button id="closeModalButton">Close Modal</button>
+        <button id="okButton">Ok</button>
+    </div>
+
+    <!-- Другие компоненты, способные изменять своё состояние -->
+    <div class="other-component" id="component1">Component 1</div>
+    <div class="other-component" id="component2">Component 2</div>
+</body>
+</html>
