@@ -35,7 +35,7 @@ document.addEventListener('onSelectProduct', (e) => {
 // событие происходит, когда пользователь нажал на кнопку добавить в корзину
 document.addEventListener('addToCart', (e) => {
 
-// написать логику добавления данных в addedProducts. Затем addedProducts будет использоваться для отрисовки данных в корзине
+//todo: написать логику добавления данных в addedProducts. Затем addedProducts будет использоваться для отрисовки данных в корзине
 })
 
 document.addEventListener( 'openCart', (e) => {
