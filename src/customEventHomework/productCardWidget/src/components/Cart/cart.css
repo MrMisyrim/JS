@@ -1,0 +1,15 @@
+.cart {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    height: 4em;
+    width: 8em;
+
+
+    background: rgba(66, 125, 201, 0.69);
+    color: #fff;
+    font-size: 20px;
+
+    padding: 1em;
+}
