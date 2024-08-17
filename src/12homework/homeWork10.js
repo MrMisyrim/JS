@@ -1,47 +1,82 @@
 // Задание 1
 
-// function curry(f) {
-//     return function(str1) {
-//         return function(str2) {
-//             return function(str3) {
-//                 return f(str1, str2, str3);
-//             };
-//         };
-//     };
-// }
+function curry(f) {
+    return function(str1) {
+        return function(str2) {
+            return function(str3) {
+                // return f(str1, str2, str3);
+            };
+        };
+    };
+}
 // function concat(str1, str2, str3){
 //     return  str1 + str2 + str3
 // }
 // let curriedconcat = curry(concat);
 // //  но нам нужна другая - каррированная , как представлено ниже
-
 // console.log(curriedconcat("Это")("новая")("строка")) //Это новая строка
+
+
+/**
+ *
+ * НУЖНО БЫЛО
+ */
+function concat(str1) {
+    return (str2) => {
+        return (str3) => {
+            return `${str1} ${str2} ${str3}`
+        }
+    }
+}
+
+console.log(concat('test')('test2')('test3'))
 
 // Задание 2
 // обычная функция
-// function partial(country, job) {
-//     let country1 = [`Spain`,`Use`]
-//         for (let key of country1) {
-//             if (key == country) {
-//                 let moneyJob = {
-//                     programmer: 1000,
-//                     tester: 800,
-//                     analyst: 700,
-//                     economist: 850
-//                 }
-//                 for (const [key, value] of Object.entries(moneyJob)) {
-//                     if (key == job) {
-//                         return {baseRate: value}
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// let getRate = partial.bind(undefined,'Use')
+/**
+ * НЕ РЕАЛИЗОВАНА КОНЦЕПЦИЯ ЧАСТИЧНОГО ПРИМЕНЕНИЯ ФУНКЦИИ
+ * НУЖНО БЫЛО ЧТО-ТО ВРОДЕ ЭТОГО
+ *
+ * function partial(country) {
+ *
+ *     return (job) => {
+ *         if (country == 'Spain' && job == 'programmer') {
+ *             return {baseRate: 1000}
+ *         } else if (country == 'France' && job == 'tester') {
+ *             return {baseRate: 1200}
+ *         }
+ *     }
+ *
+ * }
+ *ЧАСТИЧНОЕ ПРИМЕНЕНИЕ - ЗАКРЕПЛЕН 1 АРГУМЕНТ
+ * let getRate = partial('Spain')
+ * ИСПОЛЬЗОВАНИЕ ФУНКЦИИ
+ * console.log(getRate('programmer'))
+ */
+function partial(country, job) {
+    let country1 = [`Spain`,`Use`]
+        for (let key of country1) {
+            if (key == country) {
+                let moneyJob = {
+                    programmer: 1000,
+                    tester: 800,
+                    analyst: 700,
+                    economist: 850
+                }
+                for (const [key, value] of Object.entries(moneyJob)) {
+                    if (key == job) {
+                        return {baseRate: value}
+                    }
+                }
+            }
+        }
+    }
+let getRate = partial.bind(undefined,'Use')
 
-// console.log(getRate('analyst')) // {baseRate: 1000}
+console.log(getRate('analyst')) // {baseRate: 1000}
 
 // Задание 3
+// ПРИНЯТО
 // Частичное применение, когда один из аргументов предопределен заранее.
 // Карирование преобразование функции с х аргументами, в х функции с 1 аргументов в каждой
 
@@ -57,6 +92,7 @@
 // querySelector/all()
 
 // Задание 4/5
+// РАБОТАЕТ, НО КОД ПЛОХОЙ
 let buttonElement = document.querySelector(`button`)
 let box = document.getElementById('box')
 let p = document.querySelector('p')
@@ -97,7 +133,7 @@ function send() {
     box.textContent = mes;
 }
 // Задание 7
-
+// ПРИНЯТО
 let modal = document.getElementById("myModal");
 let btn = document.getElementById("myBtn");
 let span = document.getElementsByClassName("close")[0];
@@ -109,6 +145,7 @@ span.onclick = function() {
 }
 
 // Задание 8
+// ПРИНЯТО
 let btnOpen = document.querySelector(`#open`)
 let btnClose = document.querySelector(`#close`)
 let mySidenav = document.querySelector("#mySidenav")
@@ -124,6 +161,7 @@ function closeMenu() {
 }
 
 // Задание 9
+//ПРИНЯТО
 let swap = document.querySelector(`#swap`)
 let swap1 = document.querySelector(`#swap1`)
 
@@ -138,4 +176,8 @@ swap1.addEventListener(`click`, function(){
 
 })
 
+
+/**
+ * ИТОГО 6,5 ИЗ 9
+ */
 

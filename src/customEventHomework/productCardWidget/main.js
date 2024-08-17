@@ -34,19 +34,9 @@ document.addEventListener('onSelectProduct', (e) => {
 })
 // событие происходит, когда пользователь нажал на кнопку добавить в корзину
 document.addEventListener('addToCart', (e) => {
-    addedProducts.push(e.detail)
-    console.log(addedProducts)
-    cart.remove()
-    cart=createCart(addedProducts)
-    render(cart, '.main-layout__cart-container')
-// написать логику добавления данных в addedProducts. Затем addedProducts будет использоваться для отрисовки данных в корзине
 })
 
 document.addEventListener( 'openCart', (e) => {
-    // console.log(e.detail)
-    cart.remove(addedProducts.length=0)
-    cart=createCart()
-    render(cart, '.main-layout__cart-container')
 })
 
 render(cart, '.main-layout__cart-container')
