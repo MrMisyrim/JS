@@ -12,6 +12,8 @@ export const createAddProductButton = (name, id, price) => {
 	const addButton = createElement('button', [['class', 'productButton'], []], 'Добавить в корзину')
 	// создаем событие, куда добавляем данные товара, который добавляем в корзину
 	addButton.addEventListener('click', () => {
+		const addToCart = createCustomEvent('addToCart', {id,price})
+		document.dispatchEvent(addToCart)
 	})
 	// возвращаем элемент
 	return addButton
