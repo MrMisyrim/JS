@@ -39,4 +39,19 @@ export const render = (element, rootSelector) => {
 	let root = document.querySelector(rootSelector)
 	root.append(element)
 }
+export const groupBy = (array, key) =>
+	array.reduce((accumulator, object) => {
+		(accumulator[object[key]] ??= []).push(object)
+		return accumulator
+	}, {})
+export const getTotalPrice = (products) => {
+	let prices =products?.length ?  products?.map((product) => product?.price) : [0]
+	return prices?.reduce((accum, current) => accum + current)
+}
 
+export const findId= (array=[], element) =>{
+	return array.indexOf(array.find(id => id.id === element))
+}
+export const findProduct= (array=[], element) =>{
+	return array.find(id => id.id === element)
+}

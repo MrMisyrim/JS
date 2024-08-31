@@ -7,12 +7,12 @@ import { createElement, createCustomEvent } from '../../helper/helper.js'
  * @param price - цена товара
  * @return {*}
  */
-export const createAddProductButton = (name, id, price) => {
+export const createAddProductButton = (name, id, price, img) => {
 	// создаем элемент
 	const addButton = createElement('button', [['class', 'productButton'], []], 'Добавить в корзину')
 	// создаем событие, куда добавляем данные товара, который добавляем в корзину
 	addButton.addEventListener('click', () => {
-		const addToCart = createCustomEvent('addToCart', {id,price})
+		const addToCart = createCustomEvent('addToCart', {name, id, price, img})
 		document.dispatchEvent(addToCart)
 	})
 	// возвращаем элемент

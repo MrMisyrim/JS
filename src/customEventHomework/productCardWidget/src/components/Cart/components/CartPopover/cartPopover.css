@@ -1,0 +1,48 @@
+.cartPopover {
+    position: absolute;
+    background: #fff;
+    top: 6em;
+    width: 40em;
+    height: 8em;
+    padding: 25px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    overflow-y: auto;
+}
+.popoverItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    align-items: center;
+}
+.popoverItem__image__name  {
+    overflow: hidden;
+}
+.popoverItem__image__name img {
+    width: 75px;
+    height: 75px;
+}
+.popoverItem__price {
+    font-size: 1rem;
+}
+.popoverItem__total {
+    font-size: 1rem;
+}
+.popoverItem__plus {
+    display: inline;
+    font-size: 2rem;
+}
+.popoverItem__minus {
+    display: inline;
+    font-size: 2rem;
+    margin-left: 12em;
+}
+.close {
+    display: none;
+}
+
+.open {
+    display: block;
+}
